@@ -256,41 +256,70 @@ body {
 }
 
 /* RESPONSIVIDADE */
-@media (max-width: 768px) {
+
+  @media (max-width: 1090px) {
+  /* 1. Ajuste do Header para não quebrar */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: relative; /* Base para o menu absoluto */
+  }
+
+  /* 2. Esconde o botão de assinatura original no mobile se quiser poupar espaço */
+  .btn-header {
+    display: none;
+  }
+
+  /* 3. O "Hambúrguer" */
   .menu-toggle {
     display: flex;
+    z-index: 100;
   }
 
-  .btn-header{
-    display: none;
-  }
+  /* 4. O Menu que "cai" (Drop-down) */
   .nav {
-    display: none;
+    display: none; /* Escondido por padrão */
+    position: absolute;
+    top: 100%; /* Começa logo abaixo do header */
+    left: 0;
+    width: 100%;
+    background: var(--cinza);
+    padding: 2rem 0;
+    z-index: 99;
+    border-bottom: 2px solid var(--laranja);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.3);
   }
 
+  /* Classe que o JavaScript vai ativar */
   .nav.active {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background: var(--cinza);
-    width: 100%;
-    padding: 2rem 0;
+    display: block;
+    animation: fadeInDown 0.3s ease-in-out;
   }
 
   .nav-list {
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
+    gap: 2rem;
   }
 
+  /* 5. Ajuste da Seção Hero para não transbordar imagem */
   .hero {
+    padding: 4rem 2rem;
     flex-direction: column;
     text-align: center;
   }
 
   .hero-image img {
+    width: 100%;      /* Faz a imagem ser responsiva */
+    max-width: 300px; /* Mas não deixa ela ficar gigante */
     margin-top: 2rem;
   }
+}
+
+/* Animação suave para o menu aparecer */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
