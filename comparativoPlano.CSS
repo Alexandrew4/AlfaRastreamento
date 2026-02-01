@@ -1,0 +1,31 @@
+table {
+     width: 100%;
+     max-width: 800px; 
+     margin: 60px auto ; 
+     border-collapse: collapse; 
+     background: white; 
+     border-radius: 8px; 
+     overflow: hidden; 
+     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+     }
+        
+        th, td { 
+            padding: 25px; 
+            text-align: center; 
+            border-bottom: 1px solid #eee; }
+
+        .col-beneficio {
+    color: var(--preto) !important; /* O !important garante que vença a herança do body */
+}
+        
+        /* Cabeçalhos */
+        .head-principal { background-color: var(--preto); color: var(--laranja);  font-size: 2rem;
+; }
+        .head-planos { background-color:var(--cinza); color: var(--laranja); font-weight: bold; }
+        
+        /* Coluna de Benefícios (alinhada à esquerda) */
+        .col-beneficio { text-align: left; font-weight: 500; width: 40%; }
+        
+        /* Ícones */
+        .fa-check { color: #27ae60; }
+        .fa-xmark { color: #e74c3c; }

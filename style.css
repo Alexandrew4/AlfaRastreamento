@@ -148,11 +148,10 @@ display: flex;
 }
 
 /* BENEFÍCIOS */
-.beneficios {
- text-align: center;
- padding: 4rem 2rem;
- background: var(--cinza-metalico);
-}
+/* .beneficios { */
+ /* text-align: center; */
+ /* padding: 4rem 2rem; */
+/* } */
 
 .beneficios h2 {
  color: var(--laranja);
@@ -183,55 +182,6 @@ display: flex;
  display: block;
  margin-bottom: 1rem;
  color: var(--laranja);
-}
-
-/* PLANOS */
-.planos {
- padding: 4rem 2rem;
- text-align: center;
-}
-
-.planos h2 {
- color: var(--laranja);
- margin-bottom: 2rem;
-}
-
-.planos-container {
- display: flex;
- flex-wrap: wrap;
- justify-content: center;
- gap: 8rem;
-}
-
-.plano-card ul {
- list-style: none;
- margin-bottom: 2rem; /* Cria o espaço entre a lista e o botão abaixo dela */
-}
-
-.plano-card {
- background: var(--cinza);
- border-radius: 10px;
- padding: 3rem;
- width: 280px;
- transition: transform 0.3s ease;
-}
-
-.plano-card:hover {
- transform: scale(1.05);
-}
-
-.plano-card.destaque {
- border: 2px solid var(--laranja);
-}
-
-.preco {
- font-size: 2rem;
- color: var(--laranja);
-}
-
-.preco span {
- font-size: 1rem;
- color: var(--cinza-claro);
 }
 
 /* FOOTER */
@@ -340,114 +290,7 @@ display: flex;
  visibility: visible;
 }
 
-/* Animação de Pulso */
-@keyframes pulse-green {
- 0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
- 70% { transform: scale(1); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
- 100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-}
 
-/* Ajuste para telas enores para não tapar conteúdo importante */
-@media (max-width: 76px) {
- .whatsapp-float {
- width: 50px;
- height: 50px;
- bottom: 15px;
- right: 15px;
- font-size: 25px;
- }
-}
 
-/* RESPONSIVIDADE */
-@media (max-width: 1090px) {
- /* 1. Ajuste do Header */
- .header {
- display: flex;
- justify-content: space-between;
- align-items: center;
- padding: 1rem;
- position: relative; }
-
- /* 2. Esconde o botão original */
- .btn-header {
- display: none;
- }
-
- /* 3. O "Hambúrguer" - AGORA COM TAMANHO FIXO */
- .menu-toggle {
- display: flex;
- flex-direction: column;
- justify-content: space-between;
- width: 30px; /* Largura necessária para as barras aparecerem */
- height: 22px; /* Altura para dar espaço entre as barras */
- z-index: 100;
- cursor: pointer;
- }
-
- .bar {
- width: 100%;
-height: 4px;
- background-color: var(--laranja);
- border-radius: 10px;
- transition: all 0.4s ease;
- }
-
- /* --- A Mágica do X --- */
- .menu-toggle.open .bar:nth-child(1) {
- transform: translateY(9px) rotate(45deg);
- }
-
-.menu-toggle.open .bar:nth-child(2) {
- opacity: 0;
- transform: translateX(-20px);
- }
-
- .menu-toggle.open .bar:nth-child(3) {
- transform: translateY(-9px) rotate(-45deg);
- }
-
- /* 4. O Menu Drop-down */
- .nav {
- display: none; 
- position: absolute;
- top: 100%;
- left: 0;
- width: 100%;
- background: var(--cinza);
- padding: 2rem 0;
- z-index: 99;
- border-bottom: 2px solid var(--laranja);
- box-shadow: 0 10px 15px rgba(0,0,0,0.3);
- }
-
- /* Classe ativada pelo JS */
- .nav.active {
- display: block;
- animation: fadeInDown 0.3s ease-in-out;
- }
-
- .nav-list {
- flex-direction: column;
- align-items: center;
- gap: 2rem;
- }
-
- /* 5. Ajuste Hero */
- .hero {
- padding: 4rem 2rem;
- flex-direction: column;
- text-align: center;
- }
-
- .hero-image img {
- width: 100%;
- max-width: 300px;
- margin-top: 2rem;
- }
-} /* <--- ESSA É A ÚNICA CHAVE QUE FECHA A MEDIA QUERY */
-
-/* Animação suave */
-@keyframes fadeInDown {
- from { opacity: 0; transform: translateY(-10px); }
- to { opacity: 1; transform: translateY(0); }
-}
+        
+       

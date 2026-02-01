@@ -6,6 +6,10 @@
   <title>Alfa Rastreamento Veicular</title>
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
    <link rel="stylesheet" href="style.css" />
+   <link rel ="stylesheet" href="styleResponsivo.css"/>
+   <link rel="stylesheet" href="comparativoPlano.CSS"/>
+   <link rel="stylesheet" href="beneficios.css"/>
+   <link rel ="stylesheet" href="prototipo.css"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
@@ -18,7 +22,7 @@
         <li><a href="#home">Home</a></li>
         <li><a href="#beneficios">Benefícios</a></li>
         <li><a href="#planos">Planos</a></li>
-        <li><a href="#contato">Contato</a></li>
+        <li><a href="#comparativo">Compare</a></li>
       </ul>
     </nav>
     <div class="menu-toggle" id="menu-toggle">
@@ -41,57 +45,259 @@
       </div>
     </section>
 
-    <section id="beneficios" class="beneficios">
-      <h2>Benefícios Exclusivos</h2>
-      <div class="grid-beneficios">
-        <div class="card">
-          <span>📍</span>
-          <h3>Rastreamento 24h</h3>
-          <p>Acompanhe em tempo real pelo aplicativo.</p>
-        </div>
-        <div class="card">
-          <span>🔒</span>
-          <h3>Bloqueio Remoto</h3>
-          <p>Desative o veículo com um clique no app.</p>
-        </div>
-        <div class="card">
-          <span>⚙️</span>
-          <h3>Alertas de Ignição</h3>
-          <p>Receba notificações sempre que o motor for ligado.</p>
-        </div>
-        <div class="card">
-          <span>📊</span>
-          <h3>Histórico de Rotas</h3>
-          <p>Visualize o trajeto completo de uso do veículo.</p>
-        </div>
-      </div>
-    </section>
 
-    <section id="planos" class="planos">
-      <h2>Escolha seu Plano</h2>
-      <div class="planos-container">
-        <div class="plano-card">
-          <h3>Básico</h3>
-          <p class="preco">R$ 59,90<span>/mês</span></p>
-          <ul>
-            <li>Rastreamento 24h</li>
-            <li>Bloqueio remoto</li>
-            <li>Alertas de ignição</li>
-          </ul>
-          <a href="https://wa.me/5585999635800?text=Olá,%20tenho%20interesse%20no%20plano%20Básico" class="btn">Assinar</a>
+        <section id="beneficios" class="pricing-section">
+
+    
+          <h2 class="section-title">Beneficios</h2>
+
+
+    <section class="features-section">
+
+    
+    <div class="feature-item">
+        <div class="icon-box">
+            <i class="fa-solid fa-route"></i>
         </div>
-        <div class="plano-card destaque">
-          <h3>Premium</h3>
-          <p class="preco">R$ 89,90<span>/mês</span></p>
-          <ul>
-            <li>Tudo do Básico</li>
-            <li>Histórico de rotas</li>
-            <li>Suporte 24h</li>
-          </ul>
-          <a href="https://wa.me/5585999635800?text=Olá,%20tenho%20interesse%20no%20plano%20Premium" class="btn">Assinar</a>
+        <span>Histórico de<br>Rotas</span>
+    </div>
+
+    <div class="feature-item">
+        <div class="icon-box">
+            <i class="fa-solid fa-stopwatch"></i>
         </div>
-      </div>
-    </section>
+        <span>Tempo de<br>Parada</span>
+    </div>
+
+    <div class="feature-item">
+        <div class="icon-box">
+            <i class="fa-solid fa-bell"></i>
+        </div>
+        <span>Alertas</span>
+    </div>
+
+    <div class="feature-item">
+        <div class="icon-box">
+            <i class="fa-solid fa-satellite-dish"></i>
+        </div>
+        <span>Rastreamento<br>24 Horas</span>
+    </div>
+
+    <div class="feature-item">
+        <div class="icon-box">
+            <i class="fa-solid fa-headset"></i>
+        </div>
+        <span>Central 24h<br>p/ Casos de<br>Roubo/Furto</span>
+    </div>
+
+    <div class="feature-item">
+        <div class="icon-box">
+            <i class="fa-solid fa-vector-square"></i>
+        </div>
+        <span>Cerca<br> Eletrônica</span>
+    </div>
+
+</section>
+
+</section>
+
+    <section id="planos" class="pricing-section">
+
+    <h2 class="section-title">Escolha seu Plano</h2>
+
+    <table class="pricing-table">
+
+        <thead>
+
+            <tr>
+
+                <th>Veículo</th>
+
+                <th>Plano Prata</th>
+
+                <th>Plano Ouro</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr class="tipos">
+
+                <td class="vehicle-type"><i class="fa-solid fa-motorcycle"></i>MOTO</td>
+
+                <td data-label="Plano Prata"class="plan-cell" >
+
+                    <p class="plan-description"> Basico.</p>
+
+                    <div class="price">R$ 54,90<span>/mês</span></div>
+
+                    <a href="https://wa.me/5585999635800?text=Quero+o+plano+basico+moto" class="btn-contract">CONTRATAR</a>
+
+                </td>
+
+                <td data-label="Plano Ouro" class="plan-cell premium-highlight">
+
+                    <p class="plan-description highlight-text">Basico + 8 beneficios.</p>
+
+                    <div class="price">R$ 69,90<span>/mês</span></div>
+
+                    <a href="https://wa.me/5585999635800?text=Quero+o+plano+premium+moto" class="btn-contract">CONTRATAR</a>
+
+                </td>
+
+            </tr>
+
+            <tr class="tipos">
+
+                <td class="vehicle-type"><i class="fa-solid fa-car"></i>CARRO</td>
+
+                <td data-label="Plano Prata" class="plan-cell">
+
+                    <p class="plan-description">Basico.</p>
+
+                    <div class="price">R$ 59,90<span>/mês</span></div>
+
+                    <a href="https://wa.me/5585999635800?text=Quero+o+plano+basico+carro" class="btn-contract">CONTRATAR</a>
+
+                </td>
+
+                <td data-label="Plano Ouro" class="plan-cell premium-highlight">
+
+                    <p class="plan-description highlight-text">Basico + 8 beneficios.</p>
+
+                    <div class="price">R$ 74,90<span>/mês</span></div>
+
+                    <a href="https://wa.me/5585999635800?text=Quero+o+plano+premium+carro" class="btn-contract">CONTRATAR</a>
+
+                </td>
+
+            </tr>
+
+            <tr class="tipos">
+
+                <td class="vehicle-type"><i class="fa-solid fa-truck"></i>CAMINHÃO</td>
+
+                <td data-label="Plano Prata" class="plan-cell">
+
+                    <p class="plan-description">Basico.</p>
+
+                    <div class="price">R$ 69,90<span>/mês</span></div>
+
+                    <a href="https://wa.me/5585999635800?text=Quero+o+plano+basico+caminhao" class="btn-contract">CONTRATAR</a>
+
+                </td>
+
+                <td data-label="Plano Ouro" class="plan-cell premium-highlight">
+
+                    <p class="plan-description highlight-text">Basico + 8 beneficios.</p>
+
+                    <div class="price">R$ 84,90<span>/mês</span></div>
+
+                    <a href="https://wa.me/5585999635800?text=Quero+o+plano+premium+caminhao" class="btn-contract">CONTRATAR</a>
+
+                </td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</section>
+
+<section id="comparativo" class="pricing-section">
+    <table>
+        <thead>
+            <tr>
+                <th colspan="3" class="head-principal">Comparativo de Planos</th>
+            </tr>
+            <tr class="head-planos">
+                <th>Benefícios</th>
+                <th>Plano Prata</th>
+                <th>Plano Ouro</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        	  <tr>
+                <td class="col-beneficio">Rastreamento em tempo real</td>
+                <td><i class="fa-solid fa-check"></i></td>
+                <td><i class="fa-solid fa-check"></i></td>
+            </tr>
+            <tr>
+                <td class="col-beneficio">Central 24h</td>
+                <td><i class="fa-solid fa-check"></i></td>
+                <td><i class="fa-solid fa-check"></i></td>
+            </tr>
+            <tr>
+                <td class="col-beneficio">Aplicativo Android e IOS</td>
+                <td><i class="fa-solid fa-check"></i></td>
+                <td><i class="fa-solid fa-check"></i></td>
+            </tr>
+            <tr>
+                <td class="col-beneficio">Software próprio</td>
+                <td><i class="fa-solid fa-check"></i></td>
+                <td><i class="fa-solid fa-check"></i></td>
+            </tr>
+            <tr>
+                <td class="col-beneficio">Alertas:ignição, excesso de velocidade,vibração, corte de alimentação, cerca</td>
+                <td><i class="fa-solid fa-check"></i></td>
+                <td><i class="fa-solid fa-check"></i></td>
+            </tr>
+
+            <!-- beneficios ouro -->
+            <tr>
+                <td class="col-beneficio">Pane elétrica</td>
+                <td><i class="fa-solid fa-xmark"></i></td>
+                <td><i class="fa-solid fa-check"></i></td>
+            </tr>
+            <tr>
+                <td class="col-beneficio">Reboque 24h</td>
+                <td><i class="fa-solid fa-xmark"></i></td>
+                <td><i class="fa-solid fa-check"></i></td>
+            </tr>
+            <tr>
+                <td class="col-beneficio">Taxi(em caso de roubo)</td>
+                <td><i class="fa-solid fa-xmark"></i></td>
+                <td><i class="fa-solid fa-check"></i></td>
+            </tr>
+			<tr>
+                <td class="col-beneficio">Borracharia</td>
+                <td><i class="fa-solid fa-xmark"></i></td>
+                <td><i class="fa-solid fa-check"></i></td>
+            </tr>
+			<tr>
+                <td class="col-beneficio">Chaveiro</td>
+                <td><i class="fa-solid fa-xmark"></i></td>
+                <td><i class="fa-solid fa-check"></i></td>
+            </tr>
+			<tr>
+                <td class="col-beneficio">Socorro Elétrico</td>
+                <td><i class="fa-solid fa-xmark"></i></td>
+                <td><i class="fa-solid fa-check"></i></td>
+            </tr>
+			<tr>
+                <td class="col-beneficio">Pane Seca</td>
+                <td><i class="fa-solid fa-xmark"></i></td>
+                <td><i class="fa-solid fa-check"></i></td>
+            </tr>
+			<tr>
+                <td class="col-beneficio">Central de assitência veicular</td>
+                <td><i class="fa-solid fa-xmark"></i></td>
+                <td><i class="fa-solid fa-check"></i></td>
+            </tr>
+
+
+
+
+            </tbody>
+    </table>
+
+</section>
+
+
   </main>
 
  <a href="https://wa.me/5585999635800" class="whatsapp-float" target="_blank">

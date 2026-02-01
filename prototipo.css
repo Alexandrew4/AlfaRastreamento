@@ -1,0 +1,273 @@
+/* VARIÁVEIS DE APOIO (Ajuste conforme seu projeto) */
+
+.pricing-section {
+
+    padding: 60px 20px;
+
+    background: linear-gradient(180deg, var(--preto) 0%, #1a1a1a 100%);
+
+}
+
+.section-title {
+
+    width: 100%;
+
+    text-align: center; 
+
+    color: var(--laranja); 
+
+    font-size: 2.5rem; 
+
+    margin-bottom: 40px;
+
+}
+
+.pricing-table {
+
+    width: 100%;
+
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    border-collapse: separate;
+
+    border-spacing: 0;
+
+    background: var(--cinza);
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+
+}
+
+/* ESTILIZAÇÃO GERAL DAS CÉLULAS */
+
+.pricing-table th, .pricing-table td {
+
+    padding: 20px;
+
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+
+    text-align: center;
+
+}
+
+.plan-description {
+
+    color: var(--branco);
+
+    font-size: 0.9rem;
+
+    margin-bottom: 15px;
+
+}
+
+.price {
+
+    font-size: 1.5rem; 
+
+    color: var(--laranja); 
+
+    font-weight: 800; 
+
+    margin-bottom: 15px;
+
+}
+
+.price span {
+
+    font-size: 0.8rem; 
+
+    color: var(--branco);
+
+}
+
+/* CABEÇALHO */
+
+.pricing-table thead th {
+
+    background-color: #1a1a1a;
+
+    color: var(--branco);
+
+    font-size: 1.1rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+}
+
+/* COLUNA DE VEÍCULO (DESKTOP) */
+
+.vehicle-type {
+
+    background: var(--cinza);
+
+    font-weight: 700;
+
+    color: var(--branco);
+
+    text-align: left !important;
+
+    width: 25%;
+
+}
+
+.vehicle-type i {
+
+    color: var(--laranja);
+
+    font-size: 1.5rem;
+
+    margin-right: 12px;
+
+}
+
+/* BOTÃO */
+
+.btn-contract {
+
+    display: inline-block;
+
+    background: var(--laranja);
+
+    color: var(--branco);
+
+    padding: 10px 25px;
+
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    font-size: 0.85rem;
+
+    transition: all 0.3s ease;
+
+    border: 2px solid transparent;
+
+}
+
+.btn-contract:hover {
+
+    background: transparent;
+
+    border-color: var(--laranja);
+
+    transform: translateY(-3px);
+
+}
+
+
+/* --- RESPONSIVIDADE (MOBILE) --- */
+
+@media (max-width: 768px) {
+
+    .pricing-table {
+
+        display: block;
+
+        background: transparent; /* Remove o fundo da tabela pai */
+
+        box-shadow: none;
+
+        border-radius: 0;
+
+    }
+
+    * {
+
+    box-sizing: border-box;
+
+}
+
+    .pricing-table thead { display: none; }
+
+    .pricing-table tbody { display: block; }
+
+    /* CADA LINHA VIRA UM CARD SEPARADO */
+
+    .pricing-table tr.tipos {
+
+        display: block;
+
+        width: 100%;
+
+        margin-bottom: 40px; /* Separação entre os veículos */
+
+        background: #252525;
+
+        border: 2px solid var(--laranja); /* Borda unificando o card */
+
+        border-radius: 15px;
+
+        overflow: hidden;
+
+    }
+
+    .pricing-table td {
+
+        display: block;
+
+        width: 100% !important;
+
+        box-sizing: border-box;
+
+        border-bottom: 1px solid rgba(255,255,255,0.05);
+
+    }
+
+    /* TÍTULO DO VEÍCULO NO TOPO DO CARD */
+
+    .vehicle-type {
+
+        background: var(--cinza) !important;
+
+        color: var(--laranja) !important;
+
+        text-align: center !important;
+
+        font-size: 1.2rem !important;
+
+        padding: 15px !important;
+
+    }
+
+    /* DESTAQUE PREMIUM NO MOBILE */
+
+    .pricing-table td.premium-highlight {
+
+        background: var(--cinza claro) !important;
+
+        border: none; /* Remove a borda lateral do desktop */
+
+        border-top: 2px solid var(--laranja); /* Divisória interna */
+
+    }
+
+    /* LABELS (Plano Essencial / Plano Premium) */
+
+    .pricing-table td[data-label]::before {
+
+        content: attr(data-label);
+
+        display: block;
+
+        font-size: 0.9rem;
+
+        color: var(--branco);
+
+        font-weight: 800;
+
+        text-transform: uppercase;
+
+        margin-bottom: 10px;
+
+    }
+}
