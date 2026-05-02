@@ -215,9 +215,9 @@ section {
 }
 
 /* --- Ajustes Específicos para a Tabela Mobile --- */
-@media (max-width: 576px) {
+@media (max-width: 600px) {
     /* Diminui o padding da seção para ganhar espaço vertical */
-    section {
+    .planos {
         padding: 40px 0;
     }
 
