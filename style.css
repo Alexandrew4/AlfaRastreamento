@@ -213,3 +213,55 @@ section {
         font-size: 1.8rem;
     }
 }
+
+/* --- Ajustes Específicos para a Tabela Mobile --- */
+@media (max-width: 576px) {
+    /* Diminui o padding da seção para ganhar espaço vertical */
+    section {
+        padding: 40px 0;
+    }
+
+    /* Reduz o tamanho da fonte e paddings da tabela */
+    .pricing-table {
+        font-size: 0.8rem; /* Fonte menor para caber mais texto */
+    }
+
+    .pricing-table th, 
+    .pricing-table td {
+        padding: 10px 5px !important; /* Espaçamento interno mínimo */
+    }
+
+    /* Ajusta os ícones dos veículos */
+    .icon-box {
+        width: 35px;
+        height: 35px;
+        margin-right: 8px !important;
+    }
+
+    .icon-box i {
+        font-size: 1.2rem !important;
+    }
+
+    /* Ajusta os textos de preço */
+    .price.h4 {
+        font-size: 1rem !important;
+        margin-bottom: 5px !important;
+    }
+
+    .price span {
+        font-size: 0.7rem !important;
+    }
+
+    /* Torna os botões mais compactos */
+    .btn-sm {
+        padding: 5px 8px !important;
+        font-size: 0.65rem !important;
+        letter-spacing: 0;
+    }
+
+    /* Ajusta o texto do plano (ex: "Básico + 8 benefícios") */
+    .plan-description {
+        font-size: 0.7rem !important;
+        line-height: 1.1;
+    }
+}
